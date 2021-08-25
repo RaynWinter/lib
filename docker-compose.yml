@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  client:
+    build: frontend/
+    depends_on:
+      - server
+    ports: 
+      - '3000:3000'
+
+  server:
+    build: backend/
+    depends_on:
+      - postgres
+    ports: 
+      - '3001:3001'
+    command: sh -c "npx knex migrate:latest && npx knex seed:run && npm start"
+
+  postgres:
+    image: "postgres"
+    container_name: "postgres_docker"
+    
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=docker
+    - POSTGRES_DB=checkpointdb
+
+    ports:
+    - "5432:5432"
