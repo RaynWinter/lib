@@ -267,3 +267,79 @@ html, body {
   .mdl-dialog__content {
     padding: 20px 24px 24px 24px;
     color: rgba(0,0,0, 0.54); }
+
+
+    .form-group>label {
+      bottom: 34px;
+      left: 15px;
+      position: relative;
+      padding: 0px 5px 0px 5px;
+      background: none;
+      font-size: 1.4em;
+      transition: 0.2s;
+      pointer-events: none;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.4px;
+      color: #FFFFFF;
+      text-shadow:
+     -1px -1px 0 #040414,  
+      1px -1px 0 #040414,
+      -1px 1px 0 #040414,
+       1px 1px 0 #040414;
+    }
+    .form-control:focus~label {
+      bottom: 55px;
+      color: #3772FF;
+    }
+    /*nothing to test on, but kinda work*/
+    .form-control:valid~label {
+      bottom: 55px;
+      color: #45B26B;
+    }
+
+    .login-form input {
+      width: 100%;
+      height: 46px;
+      background: #040414;
+      border: 1px solid #93B2FF;  
+  }
+  .login-form input:focus {
+    outline:none;
+    width: 100%;
+    height: 46px;
+    border: 1px solid #3772FF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: 0;
+    outline-offset: 0;
+  }
+  .login-form input[type=text] {
+    padding-left: 16px;
+    color: black;
+  }
+  .login-form input[type=password] {
+    padding-left: 16px;
+    color: black;
+  }
+  .login-form select {
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+      color: black;
+      width: 100%;
+      font-size: 14px;
+      padding-left: 14px;
+      height: 46px;
+      border: 1px solid #93B2FF;
+      box-sizing: border-box;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-bottom: 20px;
+  }
+  

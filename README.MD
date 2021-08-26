@@ -1,8 +1,34 @@
 # Pair Project - Check Out a Book
 Test drive and create a React / Express app that models a library's book catalogue.
 
+
+
+## Endpoints: 
+
+// Get all books
+app.get('/books', function(req, res) {
+
+// Get specific book by book id
+app.get('/books/:book_id', (req, res) => {
+
+// Get specific book checked out (Librarian)
+app.get('/unavailable', function(req, res) {
+
+// Update for specific book
+app.put('/books/:book_id/checkout',
+
+// Get All users
+app.get('/users', )
+
+// Get specific users//get user profile information
+app.get('/users/:user_id',
+
+
 ## Requirements:
-Utilize your entire arsenal of testing: Cypress with Cypress Testing Library, React Testing Library, and Supertest.
+Utilize your entire arsenal of testing: 
+                                        Cypress with Cypress Testing Library, 
+                                        React Testing Library,
+                                        Supertest.
 
 This should be containerized and utilize `docker-compose`, and should have a README for any steps needed to initialize the project, like:
 
@@ -61,23 +87,20 @@ This should be containerized and utilize `docker-compose`, and should have a REA
 - [ ] As a librarian, I want to be able to update the system for a book that has been returned
     API endpoint: `/api/books/:bookId/return`
 
-
-
-
-Get all books from database
+Done -> Get all books from database
 
     /api/books
     select * from books
 
-Get specific book based on book id
+Done -> Get specific book based on book id
     /api/books/:bookId
     select * from books where book_id  = book_id 
 
-Get user id from specific book based on book id
+Done -> Get user id from specific book based on book id
     /api/books/:bookId/:userId
     select * from books where book_id = book_id 
 
-Put update for specific book based on book id
+Done -> Put update for specific book based on book id
 
     /api/books/:bookId/checkout/
     select * from books where book_id  = book_id and if is_available = true
@@ -86,18 +109,14 @@ Put update for specific book based on book id
     available_date = current date + 14 days
     user_id = user id
 
-/api/users
+Done -> /api/users
 select * from users
 
-
-
-
-/api/books/:bookId/checkout/:userId
+Done -> /api/books/:bookId/checkout/:userId
 select * from books where books_id  
 
 if is_available false then ->
     console.log('Book isn't available, please check back later on *available_date')
 
-
-/api/books/:bookId
-/api/books/:bookId/return
+Done -> /api/books/:bookId
+Done -> /api/books/:bookId/return

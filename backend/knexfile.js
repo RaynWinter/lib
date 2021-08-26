@@ -6,7 +6,7 @@ module.exports = {
       port: 5432,
       user: 'postgres',
       password: 'docker',
-      database: 'checkpointdb'
+      database: 'library'
     }
   },
   staging: {
